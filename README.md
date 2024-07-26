@@ -62,11 +62,11 @@
 
 ### Frontend Setup
 
-1. Will do in next comit
+1. Frontend React app is created
 
 ### Backend Setup
 
-1. Will do in next comit
+1. Node Js project initalized 
 
 ### Notes
 
