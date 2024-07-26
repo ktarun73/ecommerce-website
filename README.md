@@ -45,6 +45,7 @@
 
 -`orderId`: ObjectId
 -`userId`: ObjectId (Users collection)
+-`categoryId`: ObjectId (Category collection)
 -`address`: String
 -`totalPrice`: Number
 -`createdAt`: Date
@@ -73,4 +74,5 @@
 - The project is set up using VS Code and Git is used for version control.
 - Both frontend and backend projects are initalized
 - Backend Project is connected to mongodb atlas
+- I have added a category schema for products
 
