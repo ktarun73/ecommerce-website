@@ -76,4 +76,6 @@
 - Backend Project is connected to mongodb atlas
 - I have added a category schema for products
 - Hardcoded an example product to mongodb atlas and created and api to fetch the product from the server
+- Products are shown on frontend and added some css
+
 
