@@ -71,4 +71,6 @@
 ### Notes
 
 - The project is set up using VS Code and Git is used for version control.
-- Further development will include implementing user interfaces for product listings, shopping cart, and checkout.
+- Both frontend and backend projects are initalized
+- Backend Project is connected to mongodb atlas
+
