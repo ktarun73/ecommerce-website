@@ -77,5 +77,9 @@
 - I have added a category schema for products
 - Hardcoded an example product to mongodb atlas and created and api to fetch the product from the server
 - Products are shown on frontend and added some css
-- Created an api for user login using jsonweb token
+- Created an api for user login using jsonweb token , (Tested using hardcoding an user at database)
+- Made api url dynamic so that we do not have to change everywhere ,we just have to change it in .env file
+- Created login and logut handle at frontend
+- Added navbar to the application
+
 
