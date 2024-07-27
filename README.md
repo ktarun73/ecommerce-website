@@ -81,5 +81,9 @@
 - Made api url dynamic so that we do not have to change everywhere ,we just have to change it in .env file
 - Created login and logut handle at frontend
 - Added navbar to the application
+- Added Api for category creation and fetch all
+- Added api to find product by category
+- Implemented Frontend to show products by category on main page
+
 
 

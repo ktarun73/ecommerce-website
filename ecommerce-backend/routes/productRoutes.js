@@ -5,6 +5,7 @@ const productController = require('../controllers/productController');
 
 // APIs 
 router.get('/', productController.getAllProducts);
+router.get('/category/:categoryId',productController.getProductsByCategory); 
 
 
 
