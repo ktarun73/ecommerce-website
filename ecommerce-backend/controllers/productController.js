@@ -23,3 +23,14 @@ exports.getProductsByCategory = async (req, res) => {
     res.status(500).send('Server error');
   }
 };
+
+// fetch a single product details
+
+exports.getProductById = async (req, res) => {
+  const product = await Product.findById(req.params.productId);
+  if (product) {
+    res.status(200).json(product);
+  } else {
+    res.status(404).send({ message: 'Product not found' });
+  }
+};

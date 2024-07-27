@@ -85,6 +85,7 @@
 - Added api to find product by category
 - Implemented Frontend to show products by category on main page
 - Implemented cart page on frontend
-
+- Startrted implementing product details page
+- Developed an API to fetch single product details
 
 
