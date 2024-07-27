@@ -7,7 +7,7 @@ import './ProductList.css';
 
 const ProductList = ({ selectedCategory }) => {
   const [products, setProducts] = useState([]);
-  const { cart, addToCart, updateQuantity } = useCart();
+  const { cart, addToCart, updateQuantity, removeFromCart } = useCart();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -39,11 +39,20 @@ const ProductList = ({ selectedCategory }) => {
 
   const handleUpdateQuantity = (e, product, quantity) => {
     e.stopPropagation();
-    updateQuantity(product._id, quantity);
+    const cartItem = cart.find((item) => item._id === product._id);
+    if (cartItem && cartItem.quantity + quantity > product.stock) {
+      alert('Cannot add more than available stock');
+      return;
+    }
+    if (cartItem && cartItem.quantity + quantity <= 0) {
+      removeFromCart(product._id);
+    } else {
+      updateQuantity(product._id, quantity);
+    }
   };
 
   const handleProductClick = (product) => {
-    // product detail page logic
+    navigate(`/products/${product._id}`);
   };
 
   return (
@@ -63,10 +72,16 @@ const ProductList = ({ selectedCategory }) => {
                   <div className="quantity-controls">
                     <button onClick={(e) => handleUpdateQuantity(e, product, -1)}>-</button>
                     <span>{cartItem.quantity}</span>
-                    <button onClick={(e) => handleUpdateQuantity(e, product, 1)}>+</button>
+                    <button 
+                      onClick={(e) => handleUpdateQuantity(e, product, 1)} 
+                      disabled={cartItem.quantity >= product.stock}
+                      className={cartItem.quantity >= product.stock ? 'disabled' : ''}
+                    >
+                      +
+                    </button>
                   </div>
                 ) : (
-                  <button onClick={(e) => handleAddToCart(e, product)}>Add to Cart</button>
+                  <button onClick={(e) => handleAddToCart(e, product)} disabled={product.stock === 0}>Add to Cart</button>
                 )}
               </div>
             </div>

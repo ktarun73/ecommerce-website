@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import './App.css';
 import ProductList from './components/ProductList';
+import ProductDetails from './components/ProductDetails';
 import Categories from './components/Categories';
 import Cart from './components/Cart';
 import Login from './components/Login';
 import Logout from './components/Logout';
-import Navbar from './components/Navbar'; 
+import Navbar from './components/Navbar';
 import { isLoggedIn } from './utils/auth';
 import { CartProvider } from './context/CartContext';
 
@@ -51,6 +52,7 @@ const MainContent = ({ selectedCategory, setSelectedCategory }) => {
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/products/:productId" element={<ProductDetails />} /> {}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </main>
