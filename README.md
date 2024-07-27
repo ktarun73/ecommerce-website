@@ -87,5 +87,5 @@
 - Implemented cart page on frontend
 - Startrted implementing product details page
 - Developed an API to fetch single product details
-
+- Implemented product details functionality
 
