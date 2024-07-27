@@ -16,7 +16,7 @@ const Navbar = () => {
       </div>
       <ul className="navbar-links">
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/cart">Cart</Link></li>
+        <li><Link to="/cart">Cart</Link></li> {}
         {isLoggedIn() && (
           <>
             <li><Link to="/orders">Orders</Link></li>
