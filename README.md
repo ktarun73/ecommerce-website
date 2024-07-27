@@ -84,6 +84,7 @@
 - Added Api for category creation and fetch all
 - Added api to find product by category
 - Implemented Frontend to show products by category on main page
+- Implemented cart page on frontend
 
 
 
