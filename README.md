@@ -88,4 +88,22 @@
 - Startrted implementing product details page
 - Developed an API to fetch single product details
 - Implemented product details functionality
+- I will implement rest appliaction in next phases
+- In next phases I will develop - Checkout page, Orders page, Admin Page etc. 
 
+
+
+
+### Steps to run this project
+
+1. Clone the git repo to local machine
+2. navigate to ecommerce-backend in termial and explorer
+3. create .env file and add mongo atlas db url (MONGO_URI), port (PORT) and jwt secret key (JWT_SECRET)
+4. run command 'npm install' in termial to install all required node modules
+5. run command 'npm run dev' to run devleopmemt server
+6. Now navigate to ecommerce-frontend in termial and explorer
+7. Create .env file and add URL on which our backend is running (REACT_APP_API_URL)
+8. Run command 'npm install' in termail to install all nodemodules which are required to run our project
+9. run command 'npm start' to run server
+10. Now browser will open and our application is running in the browser
+11. Fixed bug in cart, increasing product quantity than stock is fixed
