@@ -15,7 +15,7 @@ const Cart = () => {
     return null;
   }
   const totalAmount = cart.reduce((total, product) => total + product.price * product.quantity, 0);
-  const cartItem = cart.find((item,product) => item._id === product._id);
+  // const cartItem = cart.find((item) => item._id === product._id);
   const handleCheckout = () => {
     // implement checkout here
   };
@@ -37,7 +37,7 @@ const Cart = () => {
                   <div className="quantity-controls">
                     <button onClick={() => updateQuantity(product._id, -1)}>-</button>
                     <span>{product.quantity}</span>
-                    <button onClick={() => updateQuantity(product._id, 1)} disabled={cartItem.quantity >= product.stock}>+</button>
+                    <button onClick={() => updateQuantity(product._id, 1)} disabled={ product.quantity>= product.stock}>+</button>
                   </div>
                   <button onClick={() => removeFromCart(product._id) }  className="remove-button">Remove</button>
                 </div>

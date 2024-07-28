@@ -122,4 +122,7 @@
   .checkout-button:hover {
     background-color: #218838;
   }
-  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
