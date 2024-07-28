@@ -106,4 +106,4 @@
 8. Run command 'npm install' in termail to install all nodemodules which are required to run our project
 9. run command 'npm start' to run server
 10. Now browser will open and our application is running in the browser
-11. Fixed bug in cart, increasing product quantity than stock is fixed
+11. Fixed bug in cart, increasing product quantity than stock is fixeds
