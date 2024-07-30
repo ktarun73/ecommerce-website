@@ -109,3 +109,5 @@
 11. Fixed bug in cart, increasing product quantity than stock is fixeds
 12. Implemented api for orders
 13. Implemted checkout page and order confirmation page
+14. Implemented api for my order
+14. My orders page created

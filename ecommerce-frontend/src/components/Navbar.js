@@ -19,7 +19,7 @@ const Navbar = () => {
         <li><Link to="/cart">Cart</Link></li> {}
         {isLoggedIn() && (
           <>
-            <li><Link to="/orders">Orders</Link></li>
+            <li><Link to="/my-orders">Orders</Link></li>
             {isAdmin() && <li><Link to="/admin">Admin Dashboard</Link></li>}
             <li><button onClick={handleLogout} className="logout-button">Logout</button></li>
           </>

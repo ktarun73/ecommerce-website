@@ -25,3 +25,19 @@ console.error('Error fetching order by ID:', error);
 throw error;
   }
 };
+
+
+export const getOrdersForLoggedInUser = async () => {
+    try {
+      const token = localStorage.getItem('token');
+      const response = await axios.get(`${API_URL}/my-orders`, {
+        headers: {
+          'x-auth-token': token
+    }
+});
+      return response.data;
+    }catch (error) {
+    console.error('Error fetching orders', error);
+      throw error;
+    }
+  };

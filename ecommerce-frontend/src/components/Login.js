@@ -39,7 +39,7 @@ const Login = () => {
     <div className="login-container">
       <div className="login-box">
         <h1>Login</h1>
-        {code === 'loginRequired' && <p>Please log in to add items to your cart.</p>}
+        {code === 'loginRequired' && <p>Please log first</p>}
         {error && <p>{error}</p>}
         <form onSubmit={handleLogin}>
           <input 

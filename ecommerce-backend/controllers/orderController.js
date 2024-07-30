@@ -68,3 +68,24 @@ exports.getOrderById = async (req, res) => {
       res.status(400).json({ errors: error.errors });
     }
   };
+
+
+
+//   get order of the loggedin user
+exports.getOrdersForLoggedInUser = async (req, res) => {
+    try {
+      const userId = req.user._id;
+      const orders = await Order.find({ userId }).populate('userId', 'username email');
+      const ordersWithDetails = await Promise.all(
+        orders.map(async (order) => {
+          const orderProducts = await OrderProduct.find({ orderId: order._id }).populate('productId', 'name price');
+          return {...order._doc,products: orderProducts };
+        })
+      );
+  
+      res.status(200).json(ordersWithDetails);
+    } catch (error) {
+      res.status(400).json({ errors: error.errors });
+    }
+   
+  };

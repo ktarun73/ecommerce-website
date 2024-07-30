@@ -7,6 +7,7 @@ const { auth } = require('../middleware/authMiddleware');
 
 
 router.post('/', auth, validateOrder, orderController.createOrder);
+router.get('/my-orders', auth, orderController.getOrdersForLoggedInUser); 
 router.get('/:orderId', auth, orderController.getOrderById);
 
 

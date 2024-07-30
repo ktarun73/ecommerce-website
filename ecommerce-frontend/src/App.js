@@ -12,6 +12,7 @@ import { isLoggedIn } from './utils/auth';
 import { CartProvider } from './context/CartContext';
 import CheckoutPage from './components/CheckoutPage';
 import OrderConfirmationPage from './components/OrderConfirmationPage';
+import MyOrdersPage from './components/MyOrdersPage';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -57,6 +58,7 @@ const MainContent = ({ selectedCategory, setSelectedCategory }) => {
         <Route path="/products/:productId" element={<ProductDetails />} /> {}
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/order-confirmation/:orderId" element={<OrderConfirmationPage />}/>
+        <Route path="/my-orders" element={<MyOrdersPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </main>
