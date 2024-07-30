@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Navigate } from 'react-router-dom';
+import { useNavigate, Navigate,useLocation } from 'react-router-dom';
 import axios from 'axios';
 import config from '../config';
 import { isLoggedIn } from '../utils/auth';
@@ -10,6 +10,14 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+
+
+  const location = useLocation();
+  const getQueryParams = (search) => {
+    return new URLSearchParams(search);};
+
+  const queryParams = getQueryParams(location.search);
+  const code = queryParams.get('code');
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -31,6 +39,7 @@ const Login = () => {
     <div className="login-container">
       <div className="login-box">
         <h1>Login</h1>
+        {code === 'loginRequired' && <p>Please log in to add items to your cart.</p>}
         {error && <p>{error}</p>}
         <form onSubmit={handleLogin}>
           <input 

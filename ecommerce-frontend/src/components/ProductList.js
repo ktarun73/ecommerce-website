@@ -31,7 +31,7 @@ const ProductList = ({ selectedCategory }) => {
   const handleAddToCart = (e, product) => {
     e.stopPropagation();
     if (!isLoggedIn()) {
-      navigate('/login'); 
+      navigate('/login?code=loginRequired'); 
       return;
     }
     addToCart(product); 

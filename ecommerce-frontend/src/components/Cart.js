@@ -17,7 +17,11 @@ const Cart = () => {
   const totalAmount = cart.reduce((total, product) => total + product.price * product.quantity, 0);
   // const cartItem = cart.find((item) => item._id === product._id);
   const handleCheckout = () => {
-    // implement checkout here
+    if (!isLoggedIn()) {
+      navigate('/login');
+      return null;
+    }
+    navigate('/checkout');
   };
 
   return (
@@ -35,7 +39,7 @@ const Cart = () => {
                   <h3>{product.name}</h3>
                   <p className="price">${product.price}</p>
                   <div className="quantity-controls">
-                    <button onClick={() => updateQuantity(product._id, -1)}>-</button>
+                    <button onClick={() => updateQuantity(product._id, -1)} disabled={ product.quantity == 1}>-</button>
                     <span>{product.quantity}</span>
                     <button onClick={() => updateQuantity(product._id, 1)} disabled={ product.quantity>= product.stock}>+</button>
                   </div>

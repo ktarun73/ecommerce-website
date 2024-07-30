@@ -29,5 +29,6 @@ export const isAdmin = () => {
 };
 
 export const logout = () => {
+  localStorage.removeItem('cart');
   localStorage.removeItem('token');
 };

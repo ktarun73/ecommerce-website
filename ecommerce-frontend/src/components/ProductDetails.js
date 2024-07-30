@@ -45,7 +45,7 @@ const ProductDetails = () => {
 
   const handleAddToCart = () => {
     if (!isLoggedIn()) {
-      navigate('/login');
+      navigate('/login?code=loginRequired');
       return;
     }
     addToCart(product);
