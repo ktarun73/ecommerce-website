@@ -107,3 +107,5 @@
 9. run command 'npm start' to run server
 10. Now browser will open and our application is running in the browser
 11. Fixed bug in cart, increasing product quantity than stock is fixeds
+12. Implemented api for orders
+13. Implemted checkout page and order confirmation page
