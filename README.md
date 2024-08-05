@@ -106,6 +106,7 @@ password for both: test
 - Implemted checkout page and order confirmation page
 - Implemented api for my order
 - My orders page created
+- Added apis required for admin dashboard
 
 
 
