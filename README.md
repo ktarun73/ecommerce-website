@@ -103,7 +103,7 @@ password for both: test
 - In next phases I will develop - Checkout page, Orders page, Admin Page etc.
 - Fixed bug in cart, increasing product quantity than stock is fixeds
 - Implemented api for orders
-13. Implemted checkout page and order confirmation page
+- Implemted checkout page and order confirmation page
 - Implemented api for my order
 - My orders page created
 
@@ -122,8 +122,3 @@ password for both: test
 8. Run command 'npm install' in termail to install all nodemodules which are required to run our project
 9. run command 'npm start' to run server
 10. Now browser will open and our application is running in the browser
-11. Fixed bug in cart, increasing product quantity than stock is fixeds
-12. Implemented api for orders
-13. Implemted checkout page and order confirmation page
-14. Implemented api for my order
-14. My orders page created
