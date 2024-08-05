@@ -8,6 +8,8 @@ const { validateCategory } = require('../middleware/validateCategory');
 
 router.get('/', categoryController.getAllCategory);
 router.post('/',auth, isAdmin, validateCategory,categoryController.createCategory);
+router.put('/:categoryId', auth, isAdmin, categoryController.updateCategory);
+router.delete('/:categoryId', auth, isAdmin, categoryController.deleteCategory);
 
 
 module.exports = router;
