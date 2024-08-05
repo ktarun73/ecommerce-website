@@ -14,7 +14,18 @@
 
 1. **Project Initialization**: Repository created on local machine and pushed to github
 2. **Frontend Setup**: Initialized ReactJS project.
-3. **Backend Setup**: Initialized Node.js project with Express. 
+3. **Backend Setup**: Initialized Node.js project with Express.
+
+
+### Hard-coded credentials 
+
+admin
+username: admin 
+password: admin
+
+users
+username: user1, user2
+password for both: test
 
 ### Database Schema Design
 
@@ -89,7 +100,12 @@
 - Developed an API to fetch single product details
 - Implemented product details functionality
 - I will implement rest appliaction in next phases
-- In next phases I will develop - Checkout page, Orders page, Admin Page etc. 
+- In next phases I will develop - Checkout page, Orders page, Admin Page etc.
+- Fixed bug in cart, increasing product quantity than stock is fixeds
+- Implemented api for orders
+13. Implemted checkout page and order confirmation page
+- Implemented api for my order
+- My orders page created
 
 
 
@@ -111,4 +127,3 @@
 13. Implemted checkout page and order confirmation page
 14. Implemented api for my order
 14. My orders page created
-15. Started Implementing APIs for admin dashboard
