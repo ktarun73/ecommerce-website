@@ -1,98 +1,97 @@
-.my-orders-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .my-orders-container h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #2c3e50;
-    font-size: 2.5em;
-    font-weight: 700;
-  }
-  
-  .my-orders-container ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .order-item {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.3s ease-in-out;
-  }
-  
-  .order-item:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  }
-  
-  .order-item h2 {
-    margin: 0 0 10px;
-    font-size: 1.8em;
-    color: #34495e;
-  }
-  
-  .order-item p {
-    margin: 5px 0;
-    font-size: 1.1em;
-    color: #7f8c8d;
-  }
-  
-  .order-item h3 {
-    margin: 20px 0 10px;
-    font-size: 1.5em;
-    color: #16a085;
-  }
-  
-  .order-item ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .product-item {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    color: #2c3e50;
-  }
-  
-  .product-item::before {
-    content: "•";
-    color: #16a085;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-  }
-  
-  .loading {
-    text-align: center;
-    font-size: 1.5em;
-    color: #7f8c8d;
-  }
-  
-  .error {
-    text-align: center;
-    font-size: 1.5em;
-    color: #e74c3c;
-  }
-  
-  .link-home {
-    display: block;
-    margin: 20px 0;
-    text-align: center;
-    font-size: 1.2em;
-    color: #3498db;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .link-home:hover {
-    color: #2980b9;
-  }
-  
+.myorders-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.myorders-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.myorders-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.myorders-item {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.myorders-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.myorders-order-id {
+  margin: 0 0 10px;
+  font-size: 1.8em;
+  color: #34495e;
+}
+
+.myorders-order-price, .myorders-order-address {
+  margin: 5px 0;
+  font-size: 1.1em;
+  color: #7f8c8d;
+}
+
+.myorders-products-title {
+  margin: 20px 0 10px;
+  font-size: 1.5em;
+  color: #16a085;
+}
+
+.myorders-products-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.myorders-product-item {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #2c3e50;
+}
+
+.myorders-product-item::before {
+  content: "•";
+  color: #16a085;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.myorders-loading {
+  text-align: center;
+  font-size: 1.5em;
+  color: #7f8c8d;
+}
+
+.myorders-error {
+  text-align: center;
+  font-size: 1.5em;
+  color: #e74c3c;
+}
+
+.myorders-link-home {
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1.2em;
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.myorders-link-home:hover {
+  color: #2980b9;
+}

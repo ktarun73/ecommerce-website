@@ -30,34 +30,35 @@ const MyOrdersPage = () => {
   }, [navigate]);
 
   if (loading) {
-    return <div className="loading">Loading...</div>;
+    return <div className="myorders-loading">Loading...</div>;
   }
   if (error) {
     return (
-      <div className="error">
+      <div className="myorders-error">
         Error: {error}
-        <Link to="/" className="link-home">Go to Home</Link>
+        <Link to="/" className="myorders-link-home">Go to Home</Link>
       </div>
     );
   }
   return (
-    <div className="my-orders-container">
-      <h1>My Orders</h1>
-      <ul>
+    <div className="myorders-container">
+      <h1 className="myorders-title">My Orders</h1>
+      <ul className="myorders-list">
         {orders.map(order => (
-          <li key={order._id} className="order-item">
-            <h2>Order ID: {order._id}</h2>
-            <p>Total Price: ${order.totalPrice}</p>
-            <p>Address: {order.address}</p>
-            <h3>Products:</h3>
-            <ul>
+          <li key={order._id} className="myorders-item">
+            <h2 className="myorders-order-id">Order ID: {order._id}</h2>
+            <p className="myorders-order-price">Total Price: ${order.totalPrice}</p>
+            <p className="myorders-order-address">Address: {order.address}</p>
+            <h3 className="myorders-products-title">Products:</h3>
+            <ul className="myorders-products-list">
               {order.products.map(product => (
-                <li key={product._id} className="product-item">
+                <li key={product._id} className="myorders-product-item">
                   {product.productId ? (
                     <>
                       {product.productId.name} - {product.quantity} x ${product.productId.price}
                     </>
-                  ):(<>Product information not available</>
+                  ) : (
+                    <>Product information not available</>
                   )}
                 </li>
               ))}

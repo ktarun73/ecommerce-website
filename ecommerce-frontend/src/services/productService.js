@@ -32,3 +32,27 @@ export const fetchProductById = async (productId) => {
     throw error;
   }
 };
+
+
+export const createProduct = async (productData) => {
+  const token = localStorage.getItem('token');
+  const response = await axios.post(API_URL, productData, {
+    headers: { 'x-auth-token': token }
+  });
+  return response.data;
+};
+
+export const updateProduct = async (productId, productData) => {
+  const token = localStorage.getItem('token');
+  const response = await axios.put(`${API_URL}/${productId}`, productData, {
+    headers: { 'x-auth-token': token }
+  });
+  return response.data;
+};
+
+export const deleteProduct = async (productId) => {
+  const token = localStorage.getItem('token');
+  await axios.delete(`${API_URL}/${productId}`, {
+    headers: { 'x-auth-token': token }
+  });
+};

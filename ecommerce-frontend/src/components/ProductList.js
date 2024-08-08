@@ -37,6 +37,32 @@ const ProductList = ({ selectedCategory }) => {
     addToCart(product); 
   };
 
+  const addToCartPromise = (product) => {
+    return new Promise((resolve, reject) => {
+      try {
+        addToCart(product);
+        resolve();
+      } catch (error) {
+        reject(error);
+      }
+    });
+  };
+  const handleBuyNow = (e, product) => {
+    e.stopPropagation();
+    if (!isLoggedIn()) {
+      navigate('/login?code=loginRequired');
+      return;
+    }
+    addToCartPromise(product)
+      .then(() => {
+        navigate('/checkout');
+      })
+      .catch(error => {
+        console.error('Error adding to cart:', error);
+        alert('An error occurred while adding the product to the cart. Please try again.');
+      });
+  };
+
   const handleUpdateQuantity = (e, product, quantity) => {
     e.stopPropagation();
     const cartItem = cart.find((item) => item._id === product._id);
@@ -81,7 +107,10 @@ const ProductList = ({ selectedCategory }) => {
                     </button>
                   </div>
                 ) : (
-                  <button onClick={(e) => handleAddToCart(e, product)} disabled={product.stock === 0}>Add to Cart</button>
+                  <>
+                    <button onClick={(e) => handleAddToCart(e, product)} disabled={product.stock === 0}>Add to Cart</button>
+                    <button onClick={(e) => handleBuyNow(e, product)} className="buy-now-button">Buy Now</button>
+                  </>
                 )}
               </div>
             </div>

@@ -13,6 +13,8 @@ import { CartProvider } from './context/CartContext';
 import CheckoutPage from './components/CheckoutPage';
 import OrderConfirmationPage from './components/OrderConfirmationPage';
 import MyOrdersPage from './components/MyOrdersPage';
+import AdminDashboard from './components/AdminDashboard';
+import Register from './components/Register';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -59,6 +61,8 @@ const MainContent = ({ selectedCategory, setSelectedCategory }) => {
         <Route path="/checkout" element={<CheckoutPage />} />
         <Route path="/order-confirmation/:orderId" element={<OrderConfirmationPage />}/>
         <Route path="/my-orders" element={<MyOrdersPage />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/register" element={<Register />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </main>

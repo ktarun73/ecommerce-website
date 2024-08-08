@@ -51,6 +51,34 @@ const ProductDetails = () => {
     addToCart(product);
   };
 
+
+  const addToCartPromise = (product) => {
+    return new Promise((resolve, reject) => {
+      try {
+        addToCart(product);
+        resolve();
+      } catch (error) {
+        reject(error);
+      }
+    });
+  };
+  
+  const handleBuyNow = () => {
+    if (!isLoggedIn()) {
+      navigate('/login?code=loginRequired');
+      return;
+    }
+    addToCartPromise(product)
+      .then(() => {
+        navigate('/checkout');
+      })
+      .catch(error => {
+        console.error('Error adding to cart:', error);
+        alert('An error occurred while adding the product to the cart. Please try again.');
+      });
+  };
+  
+
   const handleUpdateQuantity = (quantity) => {
     const cartItem = cart.find((item) => item._id === product._id);
     if (cartItem && cartItem.quantity + quantity > product.stock) {
@@ -85,7 +113,10 @@ const ProductDetails = () => {
               <button onClick={() => handleUpdateQuantity(1)} disabled={cartItem.quantity >= product.stock}>+</button>
             </div>
           ) : (
-            <button onClick={handleAddToCart}>Add to Cart</button>
+            <>
+              <button onClick={handleAddToCart}>Add to Cart</button>
+              <button className="buy-now-button" onClick={handleBuyNow}>Buy Now</button>
+            </>
           )}
         </div>
       </div>

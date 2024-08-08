@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, Navigate,useLocation } from 'react-router-dom';
+import { useNavigate, Navigate, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import config from '../config';
 import { isLoggedIn } from '../utils/auth';
@@ -14,7 +14,8 @@ const Login = () => {
 
   const location = useLocation();
   const getQueryParams = (search) => {
-    return new URLSearchParams(search);};
+    return new URLSearchParams(search);
+  };
 
   const queryParams = getQueryParams(location.search);
   const code = queryParams.get('code');
@@ -39,7 +40,8 @@ const Login = () => {
     <div className="login-container">
       <div className="login-box">
         <h1>Login</h1>
-        {code === 'loginRequired' && <p>Please log first</p>}
+        {code === 'loginRequired' && <p>Please login first</p>}
+        {code === 'adminLoginRequired' && <p>Admin Login Required</p>}
         {error && <p>{error}</p>}
         <form onSubmit={handleLogin}>
           <input 
@@ -58,6 +60,9 @@ const Login = () => {
           />
           <button type="submit">Login</button>
         </form>
+        <button onClick={() => navigate('/register')} className="register-button">
+          Not a user? Register
+        </button>
       </div>
     </div>
   );

@@ -107,6 +107,9 @@ password for both: test
 - Implemented api for my order
 - My orders page created
 - Added apis required for admin dashboard
+- Implemented admin dashboard
+- CRUD for categories , product 
+- will implement admin to see all orders
 
 
 

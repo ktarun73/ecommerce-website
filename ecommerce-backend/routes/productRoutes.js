@@ -11,7 +11,7 @@ router.get('/category/:categoryId',productController.getProductsByCategory);
 router.get('/:productId', productController.getProductById);
 router.post('/',auth, isAdmin, validateProduct, productController.createProduct);
 router.put('/:productId',auth, isAdmin,  productController.updateProduct);
-router.delete('/:productId', isAdmin, productController.deleteProduct);
+router.delete('/:productId', auth, isAdmin, productController.deleteProduct);
 
 
 module.exports = router;
