@@ -110,6 +110,7 @@ password for both: test
 - Implemented admin dashboard
 - CRUD for categories , product 
 - will implement admin to see all orders
+- register user api and frontent implemented
 
 
 
