@@ -114,8 +114,8 @@ const ProductDetails = () => {
             </div>
           ) : (
             <>
-              <button onClick={handleAddToCart}>Add to Cart</button>
-              <button className="buy-now-button" onClick={handleBuyNow}>Buy Now</button>
+              <button onClick={handleAddToCart} disabled={product.stock === 0}>Add to Cart</button>
+              <button className="buy-now-button" onClick={handleBuyNow} disabled={product.stock === 0}>Buy Now</button>
             </>
           )}
         </div>

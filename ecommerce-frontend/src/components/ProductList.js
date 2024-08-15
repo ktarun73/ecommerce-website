@@ -109,7 +109,7 @@ const ProductList = ({ selectedCategory }) => {
                 ) : (
                   <>
                     <button onClick={(e) => handleAddToCart(e, product)} disabled={product.stock === 0}>Add to Cart</button>
-                    <button onClick={(e) => handleBuyNow(e, product)} className="buy-now-button">Buy Now</button>
+                    <button onClick={(e) => handleBuyNow(e, product)} className="buy-now-button" disabled={product.stock === 0}>Buy Now</button>
                   </>
                 )}
               </div>

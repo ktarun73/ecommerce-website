@@ -111,6 +111,9 @@ password for both: test
 - CRUD for categories , product 
 - will implement admin to see all orders
 - register user api and frontent implemented
+- Stock will be reduced when user order
+- Add to cart and buy button is disabled when stock is 0
+
 
 
 

@@ -14,7 +14,17 @@ exports.createOrder = async (req, res) => {
       if (!productData) {
         return res.status(404).json({ message: `Product with ID ${product.productId} not found` });
       }
+
+      // Check stock
+      if (productData.stock < product.quantity) {
+        return res.status(400).json({ message: `Insufficient stock of ${productData.name}` });
+      }
+
       totalPrice += productData.price * product.quantity;
+
+      // Reduce stock
+      productData.stock -= product.quantity;
+      await productData.save();
     }
 
     // Create order
@@ -35,7 +45,7 @@ exports.createOrder = async (req, res) => {
       await orderProduct.save();
     }
 
-    // reduce stock
+    
     
     res.status(201).json(order);
   } catch (error) {
