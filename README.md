@@ -113,6 +113,8 @@ password for both: test
 - register user api and frontent implemented
 - Stock will be reduced when user order
 - Add to cart and buy button is disabled when stock is 0
+- Implementd error boundary to react app , if some error occur then error page will be displayed
+
 
 
 
@@ -122,11 +124,10 @@ password for both: test
 
 1. Clone the git repo to local machine
 2. navigate to ecommerce-backend in termial and explorer
-3. create .env file and add mongo atlas db url (MONGO_URI), port (PORT) and jwt secret key (JWT_SECRET)
-4. run command 'npm install' in termial to install all required node modules
-5. run command 'npm run dev' to run devleopmemt server
-6. Now navigate to ecommerce-frontend in termial and explorer
-7. Create .env file and add URL on which our backend is running (REACT_APP_API_URL)
-8. Run command 'npm install' in termail to install all nodemodules which are required to run our project
-9. run command 'npm start' to run server
-10. Now browser will open and our application is running in the browser
+3. run command 'npm install' in termial to install all required node modules
+4. run command 'npm run dev' to run devleopmemt server
+5. Now navigate to ecommerce-frontend in termial and explorer
+6. Create .env file and add URL on which our backend is running (REACT_APP_API_URL)
+7. Run command 'npm install' in termail to install all nodemodules which are required to run our project
+8. run command 'npm start' to run server
+9. Now browser will open and our application is running in the browser
