@@ -16,6 +16,20 @@
 2. **Frontend Setup**: Initialized ReactJS project.
 3. **Backend Setup**: Initialized Node.js project with Express.
 
+### Tests
+
+1. Show products
+2. show admin dashboard
+3. Create Product
+4. Read Product
+5. Update Product
+6. Delete Product
+7. Create Category
+7. Read Category
+8. Update Category
+9. Delete Category
+10. Stock Will be decreased when user order
+11. Login / Register
 
 ### Hard-coded credentials 
 
